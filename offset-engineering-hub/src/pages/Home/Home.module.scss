@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+
+.home {
+  padding: $space-xl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.hero {
+  text-align: center;
+  max-width: 600px;
+
+  h1 {
+    font-size: $text-xl;
+    margin-bottom: $space-lg;
+    color: $text-primary;
+  }
+
+  p {
+    font-size: $text-md;
+    line-height: 1.6;
+    margin-bottom: $space-xl;
+    color: $text-secondary;
+  }
+}
+
+.button {
+  background: $accent;
+  color: white;
+  border: none;
+  padding: $space-md $space-lg;
+  border-radius: 8px;
+  font-size: $text-md;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: color.adjust($accent, $lightness: -10%);
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: $space-md;
+  }
+
+  .hero {
+    h1 {
+      font-size: $text-lg;
+    }
+
+    p {
+      font-size: $text-sm;
+    }
+  }
+
+  .button {
+    padding: $space-sm $space-md;
+    font-size: $text-sm;
+  }
+}

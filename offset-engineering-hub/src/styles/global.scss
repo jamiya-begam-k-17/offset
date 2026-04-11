@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg-primary;
+  color: $text-primary;
+  font-family: system-ui, sans-serif;
+}

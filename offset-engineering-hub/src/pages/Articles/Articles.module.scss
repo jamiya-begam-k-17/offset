@@ -1,0 +1,146 @@
+@use "../../styles/variables" as *;
+
+.articles {
+  padding: $space-xl;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: $space-xl;
+}
+
+.header {
+  grid-column: 1 / -1;
+  margin-bottom: $space-lg;
+}
+
+.articles h2 {
+  font-size: $text-xl;
+  color: $text-primary;
+  margin: 0;
+}
+
+.clearButton {
+  background: transparent;
+  color: $text-secondary;
+  border: 1px solid $border;
+  padding: $space-sm $space-md;
+  border-radius: 6px;
+  font-size: $text-sm;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $border;
+    color: $text-primary;
+  }
+}
+
+.filters {
+  background: $bg-secondary;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: $space-md;
+  height: fit-content;
+  position: sticky;
+  top: $space-xl;
+}
+
+.filters h3 {
+  font-size: $text-md;
+  color: $text-primary;
+  margin-bottom: $space-md;
+  margin-top: 0;
+}
+
+.categoryGrid {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.categoryOption {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-sm;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: rgba($accent, 0.1);
+  }
+
+  input[type="checkbox"] {
+    margin: 0;
+    accent-color: $accent;
+  }
+
+  .categoryName {
+    font-size: $text-sm;
+    color: $text-secondary;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.results {
+  margin-bottom: 0;
+}
+
+.resultCount {
+  font-size: $text-sm;
+  color: $text-secondary;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $space-lg;
+}
+
+@media (max-width: 1024px) {
+  .articles {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+
+  .filters {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .articles {
+    padding: $space-md;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: $space-md;
+  }
+
+  .clearButton {
+    align-self: flex-end;
+  }
+
+  .filters {
+    padding: $space-md;
+  }
+
+  .categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: $space-sm;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

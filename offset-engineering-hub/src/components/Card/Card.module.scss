@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.card {
+  background: $bg-secondary;
+  border: 1px solid $border;
+  padding: $space-lg;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-bottom: $space-sm;
+    font-size: $text-md;
+    color: $text-primary;
+  }
+
+  p {
+    margin-bottom: $space-md;
+    color: $text-secondary;
+  }
+}
+
+.category {
+  display: inline-block;
+  background: $accent;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: $text-sm;
+  font-weight: 500;
+}

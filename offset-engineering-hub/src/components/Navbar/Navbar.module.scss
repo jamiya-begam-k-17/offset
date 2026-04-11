@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-md $space-lg;
+  background: $bg-secondary;
+  border-bottom: 1px solid $border;
+}
+
+.logo {
+  color: $accent;
+  font-size: $text-lg;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: $space-lg;
+
+  a {
+    color: $text-secondary;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: $space-sm $space-md;
+  }
+
+  .logo {
+    font-size: $text-md;
+  }
+
+  .links {
+    gap: $space-md;
+  }
+}

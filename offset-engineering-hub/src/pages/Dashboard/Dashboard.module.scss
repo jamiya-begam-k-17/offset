@@ -1,0 +1,309 @@
+.dashboardPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem 0 3rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(37,99,235,0.95), rgba(14,165,233,0.9));
+  color: #fff;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.75rem;
+  margin-bottom: 0.45rem;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 620px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.formGrid button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primaryButton,
+.formGrid button {
+  background: #fff;
+  color: #1d4ed8;
+}
+
+.secondaryButton {
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.28);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.panelToggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.panelToggles button {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.panelToggles button:hover,
+.panelToggles button.activeToggle {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.statCard,
+.panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.05);
+}
+
+.statCard span {
+  display: block;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.statCard strong {
+  font-size: 1.8rem;
+  color: #0f172a;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.panelHeader a,
+.toggleButton {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.toggleButton:hover,
+.panelHeader a:hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.16);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.formGrid input {
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  font-size: 0.95rem;
+}
+
+.formGrid button,
+.categoryGrid button {
+  grid-column: span 2;
+  justify-self: start;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+}
+
+.categoryGrid input {
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 0.8rem 0.95rem;
+  font-size: 0.95rem;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.categoryTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.message {
+  color: #0f766e;
+  margin: 0;
+}
+
+.articleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.articleCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.articleCard h3 {
+  margin: 0.2rem 0 0.4rem;
+  color: #0f172a;
+}
+
+.articleCard p {
+  margin: 0;
+  color: #64748b;
+}
+
+.articleMeta {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #2563eb !important;
+}
+
+.articleActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+
+.deleteButton {
+  border: none;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: #fecaca;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.emptyState {
+  color: #64748b;
+  margin: 0;
+}
+
+@media (max-width: 740px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heroActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid button {
+    grid-column: auto;
+  }
+
+  .articleCard {
+    flex-direction: column;
+  }
+
+  .articleActions {
+    align-items: flex-start;
+  }
+}

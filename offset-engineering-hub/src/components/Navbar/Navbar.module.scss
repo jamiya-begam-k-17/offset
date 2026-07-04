@@ -2,44 +2,66 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: $space-md $space-lg;
-  background: $bg-secondary;
-  border-bottom: 1px solid $border;
+  justify-content: space-between;
+  gap: $space-lg;
+  padding: $space-md $space-xl;
+  background: linear-gradient(135deg, rgba(15, 23, 38, 0.96), rgba(17, 35, 63, 0.96));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.symbol {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, $accent, $accent-strong);
+  box-shadow: 0 10px 30px rgba(79, 195, 255, 0.24);
 }
 
 .logo {
-  color: $accent;
-  font-size: $text-lg;
-  margin: 0;
+  color: $text-primary;
+  font-size: $text-xl;
+  font-weight: 800;
 }
 
 .links {
   display: flex;
+  align-items: center;
   gap: $space-lg;
-
-  a {
-    color: $text-secondary;
-    text-decoration: none;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $accent;
-    }
-  }
 }
 
-@media (max-width: 768px) {
+.links a {
+  color: $text-secondary;
+  font-size: $text-sm;
+  font-weight: 600;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.links a:hover {
+  color: $accent;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
   .navbar {
+    flex-wrap: wrap;
     padding: $space-sm $space-md;
   }
 
-  .logo {
-    font-size: $text-md;
-  }
-
   .links {
+    width: 100%;
+    justify-content: center;
     gap: $space-md;
+    margin-top: $space-sm;
   }
 }

@@ -1,27 +1,40 @@
 // Backgrounds
-$bg-primary: #0d1117;
-$bg-secondary: #161b22;
-$bg-hover: #1f2933;
+$bg-primary: #050b14;
+$bg-secondary: #0f1726;
+$bg-surface: #111d32;
+$bg-panel: #12233f;
+$bg-hover: rgba(255, 255, 255, 0.06);
 
 // Text
-$text-primary: #e6edf3;
-$text-secondary: #9da7b3;
-$text-muted: #6e7681;
+$text-primary: #f4f7fb;
+$text-secondary: #a9bdcf;
+$text-muted: #7a8ea3;
+$text-inverse: #020915;
 
 // Accent
-$accent: #58a6ff;
+$accent: #4fc3ff;
+$accent-strong: #ff8c42;
+$accent-soft: #f9b34c;
+$accent-highlight: #ffdf76;
 
 // Borders
-$border: #30363d;
+$border: rgba(255, 255, 255, 0.08);
+
+// Shadows
+$shadow-soft: 0 24px 80px rgba(2, 7, 20, 0.28);
 
 // Spacing
-$space-sm: 8px;
-$space-md: 16px;
-$space-lg: 24px;
-$space-xl: 32px;
+$space-xs: 6px;
+$space-sm: 10px;
+$space-md: 18px;
+$space-lg: 28px;
+$space-xl: 40px;
+$space-xxl: 60px;
 
 // Typography
-$text-sm: 0.875rem;
+$text-xs: 0.8rem;
+$text-sm: 0.95rem;
 $text-md: 1rem;
-$text-lg: 1.25rem;
-$text-xl: 2rem;
+$text-lg: 1.2rem;
+$text-xl: 1.8rem;
+$text-xxl: 3rem;

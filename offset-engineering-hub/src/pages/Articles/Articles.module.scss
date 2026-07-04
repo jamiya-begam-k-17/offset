@@ -1,10 +1,10 @@
 @use "../../styles/variables" as *;
 
 .articles {
-  padding: $space-xl;
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: $space-xl;
+  grid-template-columns: 1fr 320px;
+  gap: $space-xxl;
+  padding: 0;
 }
 
 .header {
@@ -13,7 +13,7 @@
 }
 
 .articles h2 {
-  font-size: $text-xl;
+  font-size: $text-xxl;
   color: $text-primary;
   margin: 0;
 }
@@ -21,31 +21,31 @@
 .clearButton {
   background: transparent;
   color: $text-secondary;
-  border: 1px solid $border;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: $space-sm $space-md;
-  border-radius: 6px;
+  border-radius: 999px;
   font-size: $text-sm;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+}
 
-  &:hover {
-    background: $border;
-    color: $text-primary;
-  }
+.clearButton:hover {
+  background: rgba(79, 195, 255, 0.08);
+  color: $accent;
 }
 
 .filters {
-  background: $bg-secondary;
-  border: 1px solid $border;
-  border-radius: 8px;
-  padding: $space-md;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: $space-lg;
   height: fit-content;
   position: sticky;
-  top: $space-xl;
+  top: calc(32px + 1rem);
 }
 
 .filters h3 {
-  font-size: $text-md;
+  font-size: $text-lg;
   color: $text-primary;
   margin-bottom: $space-md;
   margin-top: 0;
@@ -62,23 +62,23 @@
   align-items: center;
   gap: $space-sm;
   padding: $space-sm;
-  border-radius: 4px;
+  border-radius: 16px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s ease;
+}
 
-  &:hover {
-    background: rgba($accent, 0.1);
-  }
+.categoryOption:hover {
+  background: rgba(79, 195, 255, 0.08);
+}
 
-  input[type="checkbox"] {
-    margin: 0;
-    accent-color: $accent;
-  }
+input[type="checkbox"] {
+  margin: 0;
+  accent-color: $accent;
+}
 
-  .categoryName {
-    font-size: $text-sm;
-    color: $text-secondary;
-  }
+.categoryName {
+  font-size: $text-sm;
+  color: $text-secondary;
 }
 
 .content {
@@ -106,7 +106,7 @@
 @media (max-width: 1024px) {
   .articles {
     grid-template-columns: 1fr;
-    gap: $space-lg;
+    gap: $space-xl;
   }
 
   .filters {
@@ -117,27 +117,7 @@
 
 @media (max-width: 768px) {
   .articles {
-    padding: $space-md;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: $space-md;
-  }
-
-  .clearButton {
-    align-self: flex-end;
-  }
-
-  .filters {
-    padding: $space-md;
-  }
-
-  .categoryGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: $space-sm;
+    padding: $space-md 0;
   }
 
   .grid {
